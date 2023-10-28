@@ -79,20 +79,28 @@ getDetails();
 
 function deleteMovie(){
 
-  let url = window.location.href;
-      var urlParams = new URLSearchParams(url.split("?")[1]);
-      var id = urlParams.get("id");
 
-  fetch(`http://localhost:3002/BookMyShow/deleteMovie/${id}`,{
-      method:"DELETE",
-    }).then((data)=>{
-      if(data.status==200){
-        alert("deleted")
-      }else{
-        alert("error")
-      }
-      getContact();
-    }).catch((error)=>{
-      console.log(error);
-    })
+
+  let text = "Are you sure!";
+  if (confirm(text) == true) {
+    
+    let url = window.location.href;
+    var urlParams = new URLSearchParams(url.split("?")[1]);
+    var id = urlParams.get("id");
+
+fetch(`http://localhost:3002/BookMyShow/deleteMovie/${id}`,{
+    method:"DELETE",
+  }).then((data)=>{
+    if(data.status==200){
+      alert("deleted")
+    }else{
+      alert("error")
+    }
+    getContact();
+  }).catch((error)=>{
+    console.log(error);
+  })
+  } else {
+    alert("Movie was not deleted")
+  }
 }
