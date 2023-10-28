@@ -18,7 +18,6 @@ export async function getMovie(req,res){
 export async function getDetails(req,res){
    const{id}=req.params;
    let Movie=await schema.findOne({_id:id})
-   console.log(Movie);
    res.status(200).send(Movie)
    
 }

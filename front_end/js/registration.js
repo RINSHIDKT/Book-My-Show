@@ -35,7 +35,6 @@ document.getElementById("frm").addEventListener("submit",async(e)=>{
     }),
   })
     .then((res) => {
-      console.log(res.status);
       if(res.status==201)
       {
         alert("Data Added")
