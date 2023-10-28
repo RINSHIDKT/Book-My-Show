@@ -55,7 +55,7 @@ async function getDetails(){
               <div class="other-details">
                 <span> 2h 44m . ${data.Genre} . UA . ${data.Release_Date} </span>
               </div>
-              <button class="book-tickets">Book tickets</button>
+              <button class="book-tickets" onclick="deleteMovie()">Delete</button>
             </div>
           </div>
         </div>
@@ -73,3 +73,26 @@ async function getDetails(){
     .catch((error)=>{console.log(error);})
 }
 getDetails(); 
+
+
+
+
+function deleteMovie(){
+
+  let url = window.location.href;
+      var urlParams = new URLSearchParams(url.split("?")[1]);
+      var id = urlParams.get("id");
+      
+  fetch(`http://localhost:3002/BookMyShow/deleteMovie/${id}`,{
+      method:"DELETE",
+    }).then((data)=>{
+      if(data.status==200){
+        alert("deleted")
+      }else{
+        alert("error")
+      }
+      getContact();
+    }).catch((error)=>{
+      console.log(error);
+    })
+}

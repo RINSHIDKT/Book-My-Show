@@ -23,3 +23,16 @@ export async function getDetails(req,res){
    res.status(200).send(Movie)
    
 }
+
+
+export function deleteMovie(req,res)
+{
+    const{id}=req.params;
+    const data=schema.deleteOne({_id:id})
+    data.then((resp)=>{
+        res.status(200).send(resp)
+    }).catch((error)=>{
+        res.status(404).send(error)
+    })
+}
+
