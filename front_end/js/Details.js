@@ -78,9 +78,7 @@ getDetails();
 
 
 function deleteMovie(){
-
-
-
+ 
   let text = "Are you sure!";
   if (confirm(text) == true) {
     
@@ -92,15 +90,16 @@ fetch(`http://localhost:3002/BookMyShow/deleteMovie/${id}`,{
     method:"DELETE",
   }).then((data)=>{
     if(data.status==200){
-      alert("deleted")
+      alert("Movie deleted")
     }else{
       alert("error")
     }
-    getContact();
+
   }).catch((error)=>{
     console.log(error);
   })
   } else {
     alert("Movie was not deleted")
   }
+  getDetails(); 
 }
