@@ -55,7 +55,7 @@ async function getDetails(){
               <div class="other-details">
                 <span> 2h 44m . ${data.Genre} . UA . ${data.Release_Date} </span>
               </div>
-              <button class="book-tickets" onclick="deleteMovie()">Delete</button>
+              <a href="../../index.html"><button class="book-tickets" onclick="deleteMovie()">Delete</button></a>
             </div>
           </div>
         </div>
