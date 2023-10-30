@@ -183,10 +183,10 @@ a:visited {
 }
 .edit .rate-now-btn{
     width: 100px;
-    height: 30px;
+    height: 50px;
     border-radius: 10px;
     font-family: 'Roboto', sans-serif;
-    font-size: 19px;
+    font-size: 22px;
     border: none;
 }
 .languages{

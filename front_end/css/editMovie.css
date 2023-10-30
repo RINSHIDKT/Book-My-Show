@@ -270,15 +270,19 @@ input[type="file"]::file-selector-button:active {
     justify-content: center;
     gap: 10px;
 }
-.banner-preview{
-    border: 1px solid gray;
-    border-radius: 6px;
-    height: 94%;
-    width: 35%;
-}
 .poster-preview{
     border: 1px solid gray;
     border-radius: 6px;
     height: 94%;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+}
+.banner-preview{
+    border: 1px solid gray;
+    border-radius: 6px;
+    height: 94%;
     width: 60%;
+    display: flex;
+    align-items: center;
 }
