@@ -181,9 +181,9 @@ a:visited {
     justify-content: center;
     align-items: center;
 }
-.rate-now-btn{
-    width: 70%;
-    height: 60%;
+.edit .rate-now-btn{
+    width: 100px;
+    height: 30px;
     border-radius: 10px;
     font-family: 'Roboto', sans-serif;
     font-size: 19px;

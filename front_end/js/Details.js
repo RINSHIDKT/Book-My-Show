@@ -41,7 +41,7 @@ async function getDetails(){
                   </div>
                 </div>
                 <div class="right">
-                  <button class="rate-now-btn">Rate Now</button>
+                <a class="edit" href="../editMovie.html"><button class="rate-now-btn">Edit</button></a>
                 </div>
               </div>
               <div class="languages">
