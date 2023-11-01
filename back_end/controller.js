@@ -35,9 +35,7 @@ export async function editDetails(req, res) {
   const { id } = req.params;
   console.log(id);
   const { ...movie } = req.body;
-  console.log({ ...movie });
-  res.end();
-  // schema.updateOne({_id:id},{$set:{Movie_Title:Movie_Title}})
-  // schema.findByIdAndUpdate(id,req.body,{new:true})
-  // res.status(200).send("updated")
+  await schema.updateOne({ _id: id }, { $set: { ...movie } });
+
+  res.status(201).send("updated")
 }

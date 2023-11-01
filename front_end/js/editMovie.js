@@ -53,7 +53,7 @@ fetch(`http://localhost:3002/BookMyShow/movieDetails/${id}`, { method: "POST" })
         <label for="upload-banner-value">Upload Movie Banner</label>
         <input id="upload-banner-value" type="file"/>
       </div>
-      <button type="button" id="submit-btn">Submit</button>
+      <a href="./movies/Details.html?id=${data._id}"><button type="button" id="submit-btn">Submit</button></a>
     </form>`;
 
     document.getElementById("upload-poster-value").addEventListener('change', async (e) => {
