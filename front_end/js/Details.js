@@ -1,7 +1,7 @@
 async function getDetails(){
 
 
-    let url = window.location.href;
+      let url = window.location.href;
       var urlParams = new URLSearchParams(url.split("?")[1]);
       var id = urlParams.get("id");
 
